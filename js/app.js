@@ -116,7 +116,7 @@ for (let i = 3; i >= 0; i--) {
     }
     // console.log('Guess a number', number);
 }
-alert('The correct answer is 58.');
+alert('The correct answer is '+randNum+'.');
 
 // Q7
 
