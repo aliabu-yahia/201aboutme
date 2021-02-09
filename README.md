@@ -1,6 +1,4 @@
-# LAB 02
-
-## "About Me Project"
+# "About Me Project"
 
 This is a webpage to introduce myself to visitors with a guessing game.
 
@@ -13,3 +11,5 @@ This is a webpage to introduce myself to visitors with a guessing game.
 ## Reflections and Comments
 
 I strive to keep my learning process in check by evaluating outcomes and also discerning the right input, which is crucial in a world of information explosion. I will gauge my ability to apply the topic at hand to the real world and build on it using stacked modules. Having so much to learn in the real world, I try to evaluate what I want to learn every two weeks.
+
+For Lab03, two additional questions were added in the guessing game, one is guessing a random number and the other is guessing an answer out of multiple potential answers using arrays and loops. 
