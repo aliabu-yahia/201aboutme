@@ -1,15 +1,15 @@
 'use strict';
 
 let score = 0, answer;
-let randNum = Math.floor(Math.random() * 100);
+let randNum = Math.floor(Math.random() * 100) + 1;
 let dishes = ['moussaka', 'biryani', 'brownies', 'fettuccine alfredo', 'granola bars', 'musakhan', 'apple crumble'];
 let userName = prompt('What\'s your name?');
-alert('Hello, ' + userName + '! Let\'s play a guessing game!');
+alert(`Hello, ${userName}! Let\'s play a guessing game!`);
 
 // Q1
 
-let myName = prompt('Is my name Shahed?');
-switch (myName.toLowerCase()) {
+let question1 = prompt('Is my name Shahed?');
+switch (question1.toLowerCase()) {
     case 'yes':
     case 'y':
         // console.log('That\'s correct!');
@@ -27,8 +27,8 @@ switch (myName.toLowerCase()) {
 
 // Q2
 
-let country = prompt('Do I live in USA?');
-switch (country.toLowerCase()) {
+let question2 = prompt('Do I live in USA?');
+switch (question2.toLowerCase()) {
     case 'no':
     case 'n':
         // console.log('That\'s correct!');
@@ -46,8 +46,8 @@ switch (country.toLowerCase()) {
 
 // Q3
 
-let age = prompt('Am I 24 years old?');
-switch (age.toLowerCase()) {
+let question3 = prompt('Am I 24 years old?');
+switch (question3.toLowerCase()) {
     case 'no':
     case 'n':
         // console.log('That\'s correct!');
@@ -65,8 +65,8 @@ switch (age.toLowerCase()) {
 
 // Q4
 
-let coding = prompt('Am I coding right now?');
-switch (coding.toLowerCase()) {
+let question4 = prompt('Am I coding right now?');
+switch (question4.toLowerCase()) {
     case 'yes':
     case 'y':
         // console.log('That\'s correct!');
@@ -84,8 +84,8 @@ switch (coding.toLowerCase()) {
 
 // Q5
 
-let favColor = prompt('Is my favorite color blue?');
-switch (favColor.toLowerCase()) {
+let question5 = prompt('Is my favorite color blue?');
+switch (question5.toLowerCase()) {
     case 'yes':
     case 'y':
         // console.log('That\'s correct!');
@@ -104,19 +104,22 @@ switch (favColor.toLowerCase()) {
 // Q6
 
 for (let i = 3; i >= 0; i--) {
-    let number = prompt('Guess a number');
+    let number = prompt('Guess a number between 1 and 100');
     if (number > randNum) {
-        alert('Too high. You have ' + i + ' trials left.');
+        alert('Too high. You have ' + i + ' tries left.');
     } else if (number < randNum) {
-        alert('Too low. You have ' + i + ' trials left.');
-    } else if (number === randNum) {
+        alert('Too low. You have ' + i + ' tries left.');
+    } else if (number == randNum) {
         alert('You guessed it right!');
         score++;
         break;
     }
-    // console.log('Guess a number', number);
+    // console.log('Guess a number between 1 and 100', number);
+    if (i == 0) {
+        alert(`The correct answer is ${randNum}.`);
+    }
 }
-alert('The correct answer is '+randNum+'.');
+
 
 // Q7
 
@@ -126,22 +129,19 @@ for (let k = 5; k >= 0; k--) {
         if (dish.toLowerCase() === dishes[j]) {
             alert('That\'s surely a fav!');
             score++;
-            answer = 'correct';
+            k = 0;
             break;
         } else if (dish.toLowerCase() !== dishes[j]) {
             if (j === dishes.length) {
-                alert('Not that one. You have ' + k + ' trials left.');
+                alert('Not that one. You have ' + k + ' tries left.');
             }
         }
-    }
-    if (answer) {
-        break;
     }
     // console.log('What do you think is a favorite dish of mine?', dish);
 }
 
-alert('My favorite dishes are ' + dishes);
-alert('Your score is ' + score + ' out of 7. Thank you ' + userName + ' for playing!');
+alert(`My favorite dishes are ${dishes}`);
+alert(`Your score is ${score} out of 7. Thank you ${userName} for playing!`);
 
 
 
